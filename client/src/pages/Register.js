@@ -68,9 +68,7 @@ const Register = () => {
   //if user is logged in, redirect to dashboard
   useEffect(() => {
     if (user) {
-      setTimeout(() => {
-        navigate("/");
-      }, 3000);
+      navigate("/");
     }
   }, [user, navigate]);
 

@@ -30,9 +30,9 @@ app.use(express.json());
 
 app.use(express.static(path.resolve(__dirname, "./client/build")));
 
-app.use(helmet());
-app.use(xss());
-app.use(mongoSanitize());
+// app.use(helmet());
+// app.use(xss());
+// app.use(mongoSanitize());
 
 app.get("/", (req, res) => {
   //throw new Error("This is a test error");

@@ -127,7 +127,7 @@ const showStats = async (req, res) => {
   let stats = await Job.aggregate([
     {
       $match: {
-        createdBy: mongoose.Types.ObjectId(req.user.userId),
+        createdBy: new mongoose.Types.ObjectId(req.user.userId),
       },
     },
     {
@@ -153,7 +153,7 @@ const showStats = async (req, res) => {
   let monthlyApplications = await Job.aggregate([
     {
       $match: {
-        createdBy: mongoose.Types.ObjectId(req.user.userId),
+        createdBy: new mongoose.Types.ObjectId(req.user.userId),
       },
     },
     {
